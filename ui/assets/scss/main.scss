@@ -1,0 +1,272 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto/Roboto-Black.ttf") format('truetype') ;
+}
+
+@font-face {
+  font-family: Roboto Regular;
+  src: url("../font/Roboto/Roboto-Regular.ttf") format('truetype') ;
+}
+
+$orange: #ed795d;
+$black: #232020;
+$dark_blue: #ed795d;
+$white: #f4f4f4;
+.topbar-center-logo {
+  background: $black;
+}
+
+.topbar-center-logo .menu {
+  background: $black;
+}
+
+.topbar-center-logo .menu a {
+  color: $white;
+}
+
+.topbar-center-logo .top-bar-center {
+  -webkit-flex: 1.05 0 auto;
+  -ms-flex: 1.05 0 auto;
+  flex: 1.05 0 auto;
+}
+
+
+.slider-slide {
+  width: 320px;
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+  line-height: 320px;
+}
+
+.my-top-bar {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.blank-div {
+  height: 100px;
+
+}
+
+
+.black {
+  background-color: $black;
+}
+
+.darkblue {
+  background-color: $dark_blue;
+}
+
+
+.charts {
+
+  padding-bottom: 20px;
+  background-color: $black;
+  height: 100%;
+}
+
+.simple-slider {
+  margin: auto;
+  //width: 310px;
+  border-radius: 10px;
+}
+
+.arrow {
+  img {
+    border-radius: 50%;
+  }
+
+  width: 30px;
+}
+
+.apps {
+  background-color: $dark_blue;
+}
+
+.nodes {
+  background-color: $black;
+}
+
+.chart-card {
+  font-family: "Roboto Regular";
+
+  .title-chart {
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  height: 100%;
+  border-radius: 10px;
+  background-color: #3a3535;
+}
+
+.sponsorship {
+  margin-top: 10px;
+  color: $white;
+  width: fit-content;
+  width: -moz-fit-content;
+  border-radius: 2px;
+  padding: 0 15px;
+  border-bottom: $orange 3px solid;
+}
+
+.apps-card, .node-card {
+  font-family: "Roboto Regular";
+  background-color: $black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 10px 10px;
+  border-radius: 10px;
+  height: 100%;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .logo-img {
+
+  }
+
+  .x-slider {
+    img {
+      border-radius: 10px;
+    }
+
+  }
+
+  .name {
+    color: $white;
+    margin-top: 5px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .context {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 13px;
+    width: fit-content;
+
+    width: -moz-fit-content;
+    color: $white;
+    border-radius: 2px;
+    border-bottom: $orange 3px solid;
+    padding-right: 15px;
+    //border-top: $orange 1px solid;
+    //border-right: $orange 1px solid;
+  }
+
+  .desc {
+    color: $white;
+    margin-left: 2px;
+    margin-top: 3px;
+    font-size: 17px;
+  }
+
+  .number {
+
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+
+
+    .as-title, .sponsorship-title {
+
+      color: $white;
+      font-size: 13px;
+    }
+
+    .as-desc, .sponsorship-desc {
+      margin-top: 5px;
+      color: $orange;
+      font-size: 24px;
+      padding: 7px;
+      border-radius: 28px;
+      border: $orange dotted 2px;
+      //border-left: $orange 1px solid;
+      //border-right: $orange 1px solid;
+
+    }
+  }
+
+  .description {
+    margin-top: 10px;
+  }
+
+  .testimonial {
+    margin-top: 10px;
+  }
+
+  .links {
+    margin-top: 30px;
+
+    .desc {
+      margin-top: 10px;
+    }
+
+
+    .link-item {
+
+      display: block;
+      margin-top: 8px;
+      color: $orange;
+      border-radius: 5px;
+
+      //border: $orange solid 1px;
+      //padding: 2px 5px;
+    }
+  }
+
+
+}
+
+.node-card {
+  background-color: $white;
+
+  .node-name {
+    margin-top: -20px;
+    color: $black;
+  }
+
+  .title {
+    width: fit-content;
+    width: -moz-fit-content;
+    font-size: 13px;
+    color: $black;
+    border-bottom: $orange 2px solid;
+  }
+
+  .link-item {
+    color: $black !important;
+  }
+
+  .desc {
+    color: $black;
+  }
+}
+
+.footer-part {
+  font-size: 15px;
+  color: $white;
+  background-color: $black;
+}
+
+.apps-section-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: $black;
+  margin-bottom: 60px;
+}
+
+.node-section-title {
+  color: $white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}

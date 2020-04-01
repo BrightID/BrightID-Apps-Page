@@ -1,0 +1,2728 @@
+{
+  "closed": [
+    {
+      "t": 1568239200,
+      "channel_id": "1085370787",
+      "channel_name": "Altcoin Whales",
+      "currency": "TOMO",
+      "trades": [
+        {
+          "quantity": 83.0,
+          "price": 5.95e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394650462",
+      "channel_name": "Crypto Traders\u2122",
+      "currency": "DATA",
+      "trades": [
+        {
+          "quantity": 2493.0,
+          "price": 2e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1247.0,
+          "price": 2e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1246.0,
+          "price": 2e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1332700781",
+      "channel_name": "Crypto Trading \u20bfoss (C.T.\u20bf)",
+      "currency": "BAT",
+      "trades": [
+        {
+          "quantity": 212.0,
+          "price": 2.384e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 211.0,
+          "price": 2.384e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 210.0,
+          "price": 2.384e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 210.0,
+          "price": 2.384e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 209.0,
+          "price": 2.384e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1292278703",
+      "channel_name": "Binance Signals TURKEY\ud83c\udf96\ud83d\ude80",
+      "currency": "NXS",
+      "trades": [
+        {
+          "quantity": 217.0,
+          "price": 2.1e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 108.0,
+          "price": 2.1e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1336835428",
+      "channel_name": "premium binance signals turkey",
+      "currency": "NXS",
+      "trades": [
+        {
+          "quantity": 217.0,
+          "price": 2.1e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 108.0,
+          "price": 2.1e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1167910928",
+      "channel_name": "Crypto Signals Club",
+      "currency": "TCT",
+      "trades": [
+        {
+          "quantity": 8145.0,
+          "price": 1.15e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2034.0,
+          "price": 1.15e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 6102.0,
+          "price": 1.15e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "DNT",
+      "trades": [
+        {
+          "quantity": 11555.0,
+          "price": 8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 2885.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1732.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1731.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1731.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 8658.0,
+          "price": 8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1571001904,
+      "channel_id": "1453187298",
+      "channel_name": "Crypto Trades",
+      "currency": "QTUM",
+      "trades": [
+        {
+          "quantity": 36.02,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 35.84,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 35.66,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 35.49,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.34,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 34.24,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 36.21,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 36.77,
+          "price": 0.000275,
+          "type": "buy"
+        },
+        {
+          "quantity": 36.39,
+          "price": 0.000275,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "POE",
+      "trades": [
+        {
+          "quantity": 3227.0,
+          "price": 2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 38178.0,
+          "price": 2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 10340.0,
+          "price": 2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4432.0,
+          "price": 2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 41363.0,
+          "price": 2e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "POE",
+      "trades": [
+        {
+          "quantity": 41405.0,
+          "price": 2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 10340.0,
+          "price": 2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4432.0,
+          "price": 2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 11820.0,
+          "price": 2e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "VIBE",
+      "trades": [
+        {
+          "quantity": 5520.0,
+          "price": 1.78e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 89.0,
+          "price": 1.78e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 67.0,
+          "price": 1.78e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 112.0,
+          "price": 1.78e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 5246.0,
+          "price": 1.78e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1332700781",
+      "channel_name": "Crypto Trading \u20bfoss (C.T.\u20bf)",
+      "currency": "LEND",
+      "trades": [
+        {
+          "quantity": 2122.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2187.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2178.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2168.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2159.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1092.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1087.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1082.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1078.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 870.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 869.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 868.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1607.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 323.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1696.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 231.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1085370787",
+      "channel_name": "Altcoin Whales",
+      "currency": "SNT",
+      "trades": [
+        {
+          "quantity": 4262.0,
+          "price": 1.19e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 3039.0,
+          "price": 1.19e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 350.0,
+          "price": 1.19e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 868.0,
+          "price": 1.19e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1208200814",
+      "channel_name": "Cornix Community",
+      "currency": "ADA",
+      "trades": [
+        {
+          "quantity": 1088.0,
+          "price": 1e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394650462",
+      "channel_name": "Crypto Traders\u2122",
+      "currency": "MATIC",
+      "trades": [
+        {
+          "quantity": 1012.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 91.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 65.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 55.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1511.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2704.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2667.0,
+          "price": 1.87e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1365.0,
+          "price": 1.87e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1350.0,
+          "price": 1.87e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1332.0,
+          "price": 1.87e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1013.0,
+          "price": 1.87e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 8096.0,
+          "price": 1.87e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1571001904,
+      "channel_id": "1453187298",
+      "channel_name": "Crypto Trades",
+      "currency": "ENJ",
+      "trades": [
+        {
+          "quantity": 9.0,
+          "price": 1.22e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 305.0,
+          "price": 1.22e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 319.0,
+          "price": 1.22e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 316.0,
+          "price": 1.22e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 81.0,
+          "price": 1.22e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 634.0,
+          "price": 1.22e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 91.0,
+          "price": 1.22e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 81.0,
+          "price": 1.22e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1336835428",
+      "channel_name": "premium binance signals turkey",
+      "currency": "DOCK",
+      "trades": [
+        {
+          "quantity": 5603.0,
+          "price": 8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 5069.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 528.0,
+          "price": 8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1292278703",
+      "channel_name": "Binance Signals TURKEY\ud83c\udf96\ud83d\ude80",
+      "currency": "DOCK",
+      "trades": [
+        {
+          "quantity": 5603.0,
+          "price": 8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 5597.0,
+          "price": 8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1336835428",
+      "channel_name": "premium binance signals turkey",
+      "currency": "OAX",
+      "trades": [
+        {
+          "quantity": 859.0,
+          "price": 5.3e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 874.0,
+          "price": 5.3e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 436.0,
+          "price": 5.3e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394345959",
+      "channel_name": "PALM BEACH SIGNALS",
+      "currency": "THETA",
+      "trades": [
+        {
+          "quantity": 441.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 439.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 439.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 439.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 436.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 436.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 436.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 432.0,
+          "price": 1.119e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 220.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 219.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 219.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 90.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 129.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 217.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 217.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 217.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 215.0,
+          "price": 1.119e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "IOST",
+      "trades": [
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16617.0,
+          "price": 6.2e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4150.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 74702.0,
+          "price": 6.2e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1329695222",
+      "channel_name": "CryptoInversionistas \u2122",
+      "currency": "ONG",
+      "trades": [
+        {
+          "quantity": 33.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 271.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 33.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 33.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 366.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 378.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 378.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 374.0,
+          "price": 1.36e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 377.0,
+          "price": 1.36e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 152.0,
+          "price": 1.36e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 34.0,
+          "price": 1.36e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 1129.0,
+          "price": 1.36e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 1129.0,
+          "price": 1.36e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "LTC",
+      "trades": [
+        {
+          "quantity": 0.81,
+          "price": 0.00625,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.8,
+          "price": 0.00625,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.79,
+          "price": 0.00625,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.69,
+          "price": 0.00625,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.1,
+          "price": 0.00625,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "BLZ",
+      "trades": [
+        {
+          "quantity": 4707.0,
+          "price": 2e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 4685.0,
+          "price": 2e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 4663.0,
+          "price": 2e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 4729.0,
+          "price": 2e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1371773302",
+      "channel_name": "CRYPTO LEAKED SIGNALS\u2122",
+      "currency": "MTH",
+      "trades": [
+        {
+          "quantity": 3773.0,
+          "price": 9e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 3769.0,
+          "price": 9e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1292278703",
+      "channel_name": "Binance Signals TURKEY\ud83c\udf96\ud83d\ude80",
+      "currency": "CND",
+      "trades": [
+        {
+          "quantity": 3676.0,
+          "price": 6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 3552.0,
+          "price": 6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 2901.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 630.0,
+          "price": 6e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1336835428",
+      "channel_name": "premium binance signals turkey",
+      "currency": "CND",
+      "trades": [
+        {
+          "quantity": 5049.0,
+          "price": 6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 2179.0,
+          "price": 6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 7388.0,
+          "price": 6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 3690.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 165.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 200.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 173.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 8314.0,
+          "price": 6e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 5749.0,
+          "price": 6e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1314445788",
+      "channel_name": "Intra Day Trading \ud83d\udcb9",
+      "currency": "COS",
+      "trades": [
+        {
+          "quantity": 220.0,
+          "price": 1e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 781.0,
+          "price": 1e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2635.0,
+          "price": 1e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1291615285",
+      "channel_name": "Alan Masters Telegram",
+      "currency": "BCD",
+      "trades": [
+        {
+          "quantity": 99.0,
+          "price": 4.5e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 99.0,
+          "price": 4.5e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 99.0,
+          "price": 4.5e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 49.0,
+          "price": 4.5e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 49.0,
+          "price": 4.5e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1125136365",
+      "channel_name": "Team Monster",
+      "currency": "XRP",
+      "trades": [
+        {
+          "quantity": 186.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 185.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 191.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 191.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 191.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 86.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 104.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 104.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 86.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 86.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 104.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 188.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 188.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 188.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 188.0,
+          "price": 2.66e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 46.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 49.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 95.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 95.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 94.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 94.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 94.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 77.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 16.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 93.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 93.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 93.0,
+          "price": 2.66e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "DNT",
+      "trades": [
+        {
+          "quantity": 11555.0,
+          "price": 8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 2885.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1732.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1731.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1731.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 8658.0,
+          "price": 8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1332700781",
+      "channel_name": "Crypto Trading \u20bfoss (C.T.\u20bf)",
+      "currency": "LEND",
+      "trades": [
+        {
+          "quantity": 2122.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2187.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2178.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2168.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2159.0,
+          "price": 2.35e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1092.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1087.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1082.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1078.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 870.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 869.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 868.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1607.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 323.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1696.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 231.0,
+          "price": 2.35e-6,
+          "type": "sell"
+        }
+      ]
+    }
+  ],
+  "open": [
+    {
+      "t": 1568239200,
+      "channel_id": "1353862358",
+      "channel_name": "Royal Crypto Queen Signals",
+      "currency": "DOGE",
+      "trades": [
+        {
+          "quantity": 17812.0,
+          "price": 2.5e-7,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1167910928",
+      "channel_name": "Crypto Signals Club",
+      "currency": "DOGE",
+      "trades": [
+        {
+          "quantity": 1166.0,
+          "price": 2.5e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 16646.0,
+          "price": 2.5e-7,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1353862358",
+      "channel_name": "Royal Crypto Queen Signals",
+      "currency": "ETH",
+      "trades": [
+        {
+          "quantity": 0.271,
+          "price": 0.018,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.006,
+          "price": 0.018,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.105,
+          "price": 0.018,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.024,
+          "price": 0.018,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.135,
+          "price": 0.018,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394345959",
+      "channel_name": "PALM BEACH SIGNALS",
+      "currency": "DLT",
+      "trades": [
+        {
+          "quantity": 827.0,
+          "price": 5.95e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 820.0,
+          "price": 5.95e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 277.0,
+          "price": 5.95e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 32.0,
+          "price": 5.95e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 504.0,
+          "price": 5.95e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 409.0,
+          "price": 5.95e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 406.0,
+          "price": 5.95e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394345959",
+      "channel_name": "PALM BEACH SIGNALS",
+      "currency": "DASH",
+      "trades": [
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.687,
+          "price": 0.00725,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.343,
+          "price": 0.00725,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.343,
+          "price": 0.00725,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1329695222",
+      "channel_name": "CryptoInversionistas \u2122",
+      "currency": "OST",
+      "trades": [
+        {
+          "quantity": 3667.0,
+          "price": 1.36e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1394345959",
+      "channel_name": "PALM BEACH SIGNALS",
+      "currency": "DGD",
+      "trades": [
+        {
+          "quantity": 2.11,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.11,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.101,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.092,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.092,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.092,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.092,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.083,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 2.083,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.15,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 1.104,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.141,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 0.679,
+          "price": 0.002333,
+          "type": "buy"
+        },
+        {
+          "quantity": 1.053,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.053,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.049,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.044,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.065,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 0.979,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.044,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.044,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.04,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.04,
+          "price": 0.002333,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.036,
+          "price": 0.002333,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1268883592",
+      "channel_name": "CryptoTA_Signals",
+      "currency": "SYS",
+      "trades": [
+        {
+          "quantity": 2053.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1943.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 101.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1943.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 101.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2036.0,
+          "price": 2.45e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1025.0,
+          "price": 2.45e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1021.0,
+          "price": 2.45e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 697.0,
+          "price": 2.45e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 324.0,
+          "price": 2.45e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 1017.0,
+          "price": 2.45e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1329695222",
+      "channel_name": "CryptoInversionistas \u2122",
+      "currency": "ENJ",
+      "trades": [
+        {
+          "quantity": 570.0,
+          "price": 9.08e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 563.0,
+          "price": 9.08e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 556.0,
+          "price": 9.08e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 549.0,
+          "price": 9.08e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 284.0,
+          "price": 9.08e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 137.0,
+          "price": 9.08e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 144.0,
+          "price": 9.08e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 277.0,
+          "price": 9.08e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 274.0,
+          "price": 9.08e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1122153023",
+      "channel_name": "INFOCRYPTO (FREE)",
+      "currency": "XTZ",
+      "trades": [
+        {
+          "quantity": 31.34,
+          "price": 0.00017,
+          "type": "buy"
+        },
+        {
+          "quantity": 31.07,
+          "price": 0.00017,
+          "type": "buy"
+        },
+        {
+          "quantity": 15.65,
+          "price": 0.00017,
+          "type": "sell"
+        },
+        {
+          "quantity": 15.51,
+          "price": 0.00017,
+          "type": "sell"
+        },
+        {
+          "quantity": 31.18,
+          "price": 0.00017,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1332700781",
+      "channel_name": "Crypto Trading \u20bfoss (C.T.\u20bf)",
+      "currency": "STX",
+      "trades": [
+        {
+          "quantity": 416.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 226.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 187.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 420.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 419.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 417.0,
+          "price": 1.205e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 209.0,
+          "price": 1.205e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 208.0,
+          "price": 1.205e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1332700781",
+      "channel_name": "Crypto Trading \u20bfoss (C.T.\u20bf)",
+      "currency": "ALGO",
+      "trades": [
+        {
+          "quantity": 172.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 177.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 176.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 176.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 175.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 175.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 173.0,
+          "price": 2.894e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 88.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 87.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 87.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 175.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 87.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 87.0,
+          "price": 2.894e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1376259978",
+      "channel_name": "My Binance Paradise\ud83c\udf34",
+      "currency": "FTT",
+      "trades": [
+        {
+          "quantity": 39.59,
+          "price": 0.000248,
+          "type": "buy"
+        },
+        {
+          "quantity": 40.65,
+          "price": 0.000248,
+          "type": "buy"
+        },
+        {
+          "quantity": 40.29,
+          "price": 0.000248,
+          "type": "buy"
+        },
+        {
+          "quantity": 39.94,
+          "price": 0.000248,
+          "type": "buy"
+        },
+        {
+          "quantity": 10.15,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 10.06,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 9.97,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 29.93,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 20.04,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 20.04,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 4.95,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 3.87,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 3.87,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 3.87,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 3.48,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.37,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 1.28,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 6.43,
+          "price": 0.000248,
+          "type": "sell"
+        },
+        {
+          "quantity": 20.03,
+          "price": 0.000248,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "DNT",
+      "trades": [
+        {
+          "quantity": 11555.0,
+          "price": 8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 2885.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1732.0,
+          "price": 8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 1732.0,
+          "price": 8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1376259978",
+      "channel_name": "My Binance Paradise\ud83c\udf34",
+      "currency": "XMR",
+      "trades": [
+        {
+          "quantity": 1.16,
+          "price": 0.0086,
+          "type": "buy"
+        },
+        {
+          "quantity": 1.157,
+          "price": 0.0086,
+          "type": "buy"
+        },
+        {
+          "quantity": 1.153,
+          "price": 0.0086,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "BRD",
+      "trades": [
+        {
+          "quantity": 380.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 240.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 6.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 126.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "IOTA",
+      "trades": [
+        {
+          "quantity": 368.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 365.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 362.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 360.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 357.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 354.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 348.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "IOTA",
+      "trades": [
+        {
+          "quantity": 365.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 362.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 360.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 357.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 354.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 352.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 7.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 341.0,
+          "price": 2.6e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "ENJ",
+      "trades": [
+        {
+          "quantity": 304.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 451.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 734.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 724.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 714.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 704.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 377.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 318.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 685.0,
+          "price": 1.427e-5,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "LTO",
+      "trades": [
+        {
+          "quantity": 1534.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1527.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1520.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1513.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1506.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1500.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 958.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 329.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 200.0,
+          "price": 6.55e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "MANA",
+      "trades": [
+        {
+          "quantity": 1638.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1617.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1047.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 559.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1596.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1586.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1576.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1564.0,
+          "price": 6.05e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1572187415,
+      "channel_id": "1188252748",
+      "channel_name": "Coin Pump Crew",
+      "currency": "CMT",
+      "trades": [
+        {
+          "quantity": 6614.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 6614.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2531.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2666.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1417.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 2528.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 264.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 658.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 3164.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1314.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 4968.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 332.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 6614.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 4892.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 1478.0,
+          "price": 1.52e-6,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1258098667",
+      "channel_name": "\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8e\ud835\udc82\u2122\ufe0f \ud835\udc84\ud835\udc93\ud835\udc9a\ud835\udc91\ud835\udc95\ud835\udc90 \ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d",
+      "currency": "WPR",
+      "trades": [
+        {
+          "quantity": 5627.0,
+          "price": 7.8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 5561.0,
+          "price": 7.8e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 4216.0,
+          "price": 7.8e-7,
+          "type": "sell"
+        },
+        {
+          "quantity": 4166.0,
+          "price": 7.8e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "ARN",
+      "trades": [
+        {
+          "quantity": 317.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 312.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 307.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 237.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "ARN",
+      "trades": [
+        {
+          "quantity": 377.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 373.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 63.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 78.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1174077730",
+      "channel_name": "\ud835\udc6a\ud835\udc93\ud835\udc86\ud835\udc82\ud835\udc95\ud835\udc8a\ud835\udc97\ud835\udc86 \ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc94",
+      "currency": "ARN",
+      "trades": [
+        {
+          "quantity": 378.0,
+          "price": 1.2e-5,
+          "type": "buy"
+        },
+        {
+          "quantity": 8.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 13.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 262.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        },
+        {
+          "quantity": 377.0,
+          "price": 1.2e-5,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "TNB",
+      "trades": [
+        {
+          "quantity": 6966.0,
+          "price": 1.6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 19349.0,
+          "price": 1.6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 19716.0,
+          "price": 1.6e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1174077730",
+      "channel_name": "\ud835\udc6a\ud835\udc93\ud835\udc86\ud835\udc82\ud835\udc95\ud835\udc8a\ud835\udc97\ud835\udc86 \ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc94",
+      "currency": "TNB",
+      "trades": [
+        {
+          "quantity": 26315.0,
+          "price": 1.6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 19716.0,
+          "price": 1.6e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1250931450",
+      "channel_name": "\ud835\udc6e\ud835\udc90\ud835\udc8d\ud835\udc85\ud835\udc86\ud835\udc8f-\ud835\udc7a\ud835\udc8a\ud835\udc88\ud835\udc8f\ud835\udc82\ud835\udc8d\ud835\udc9b\u2122(\ud835\udc69\ud835\udc8a\ud835\udc95\ud835\udc8e\ud835\udc86\ud835\udc99/\ud835\udc69\ud835\udc8a\ud835\udc8f\ud835\udc82\ud835\udc8f\ud835\udc84\ud835\udc86)",
+      "currency": "TNB",
+      "trades": [
+        {
+          "quantity": 25032.0,
+          "price": 1.6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 1283.0,
+          "price": 1.6e-7,
+          "type": "buy"
+        },
+        {
+          "quantity": 19716.0,
+          "price": 1.6e-7,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1114257122",
+      "channel_name": "Check Below Group Signals",
+      "currency": "MTH",
+      "trades": [
+        {
+          "quantity": 4495.0,
+          "price": 8.5e-7,
+          "type": "buy"
+        }
+      ]
+    },
+    {
+      "t": 1570645839,
+      "channel_id": "1232887259",
+      "channel_name": "Crypto VIP Club\u2122",
+      "currency": "DLT",
+      "trades": [
+        {
+          "quantity": 882.0,
+          "price": 4e-6,
+          "type": "buy"
+        },
+        {
+          "quantity": 22.0,
+          "price": 4e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 28.0,
+          "price": 4e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 128.0,
+          "price": 4e-6,
+          "type": "sell"
+        },
+        {
+          "quantity": 43.0,
+          "price": 4e-6,
+          "type": "sell"
+        }
+      ]
+    },
+    {
+      "t": 1568239200,
+      "channel_id": "1353862358",
+      "channel_name": "Royal Crypto Queen Signals",
+      "currency": "LINK",
+      "trades": [
+        {
+          "quantity": 12.0,
+          "price": 0.00035,
+          "type": "buy"
+        },
+        {
+          "quantity": 11.0,
+          "price": 0.00035,
+          "type": "buy"
+        },
+        {
+          "quantity": 11.0,
+          "price": 0.00035,
+          "type": "buy"
+        },
+        {
+          "quantity": 11.0,
+          "price": 0.00035,
+          "type": "buy"
+        },
+        {
+          "quantity": 11.0,
+          "price": 0.00035,
+          "type": "buy"
+        }
+      ]
+    }
+  ]
+}
