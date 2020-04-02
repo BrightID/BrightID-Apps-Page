@@ -36,11 +36,11 @@ function appsMaker(apps) {
             "                    <div class=\"number\">\n" +
             "                        <div class=\"assigned \">\n" +
             "                            <div class=\"as-title \">Assigned</div>\n" +
-            "                            <div class=\"sponsorship-desc  text-center\">" + apps[i]["Assigned Sponsorships"] + "</div>\n" +
+            "                            <div class=\"sponsorship-desc  text-center\"><p>" + apps[i]["Assigned Sponsorships"] + "</p></div>\n" +
             "                        </div>\n" +
             "                        <div class=\"assigned \">\n" +
             "                            <div class=\"sponsorship-title \">&nbsp;   Unused &nbsp;</div>\n" +
-            "                            <div class=\"sponsorship-desc text-center\">" + apps[i]["Unused Sponsorships"] + "</div>\n" +
+            "                            <div class=\"sponsorship-desc text-center\"><p>" + apps[i]["Unused Sponsorships"] + "</p></div>\n" +
             "                        </div>\n" +
             "                    </div>\n" +
             "\n" +

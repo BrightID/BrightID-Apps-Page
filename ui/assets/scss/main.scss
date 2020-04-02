@@ -175,9 +175,11 @@ $white: #f4f4f4;
     display: flex;
     justify-content: space-around;
 
+    $widthc: 67px;
 
     .as-title, .sponsorship-title {
-
+      text-align: center;
+      width: $widthc;
       color: $white;
       font-size: 13px;
     }
@@ -185,13 +187,22 @@ $white: #f4f4f4;
     .as-desc, .sponsorship-desc {
       margin-top: 5px;
       color: $orange;
-      font-size: 24px;
-      padding: 7px;
-      border-radius: 28px;
+      font-size: 20px;
       border: $orange dotted 2px;
-      //border-left: $orange 1px solid;
-      //border-right: $orange 1px solid;
+      position: relative;
+      width: $widthc;
+      height: $widthc;
+      padding: 4px;
+      border-radius: 50%;
 
+      p {
+        padding: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+      }
     }
   }
 
@@ -217,9 +228,6 @@ $white: #f4f4f4;
       margin-top: 8px;
       color: $orange;
       border-radius: 5px;
-
-      //border: $orange solid 1px;
-      //padding: 2px 5px;
     }
   }
 
