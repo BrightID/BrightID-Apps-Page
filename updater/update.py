@@ -4,6 +4,7 @@ from googleapiclient.discovery import build
 import requests
 import datetime
 import os.path
+import pymongo
 import pickle
 import config
 import json
@@ -39,8 +40,26 @@ def read_googl_sheet():
     return results
 
 
+def uchart_gen(currentValue):
+    client = pymongo.MongoClient('mongodb://localhost:27017/')
+    db = client['sponsored_users']
+    uchart = {'title': 'Sponsored Uers', 'timestamps': [], 'values': []}
+    for p in db.uchart.find().sort('_id'):
+        uchart['timestamps'].append(
+            p['_id'].generation_time.timestamp() * 1000)
+        uchart['values'].append(p['value'])
+    now = int(time.time() * 1000)
+    if (now - uchart['timestamps'][-1]) > 604800000:  # update weekly
+        db.uchart.insert_one({'value': currentValue})
+        uchart['timestamps'].append(now)
+        uchart['values'].append(currentValue)
+    client.close()
+    return uchart
+
+
 def main():
     print('Updating the application page data')
+
     result = read_googl_sheet()
     cs = requests.get(config.contexts_url).json()['data']['contexts']
     sponsereds = sum([c['assignedSponsorships'] -
@@ -60,19 +79,7 @@ def main():
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
 
     # sponsored users chart data
-    now = int(time.time() * 1000)
-    if os.path.exists(config.data_file_addr):
-        with open(config.data_file_addr, 'r') as f:
-            odata = json.loads(f.read().replace('result = ', ''))
-        uchart = odata['Charts'][0]
-        if (now - uchart['timestamps'][-1]) > 604800000:  # update weekly
-            uchart['timestamps'].append(now)
-            uchart['values'].append(sponsereds)
-    else:
-        uchart = {'title': 'Sponsored Uers'}
-        uchart['timestamps'] = [now]
-        uchart['values'] = [sponsereds]
-    result['Charts'] = [uchart]
+    result['Charts'] = [uchart_gen(sponsereds)]
 
     # applications chart data
     achart = {'title': 'Applications'}
@@ -87,7 +94,6 @@ def main():
         r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Nodes']])
     nchart['values'] = [i + 1 for i, t in enumerate(nchart['timestamps'])]
     result['Charts'].append(nchart)
-
     with open(config.data_file_addr, 'w') as f:
         f.write('result = {}'.format(json.dumps(result, indent=2)))
 
