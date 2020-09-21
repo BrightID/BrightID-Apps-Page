@@ -1,98 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>BrightID | CryptoCurrency</title>
-    <link href="assets/css/foundation.min.css" rel="stylesheet">
-    <link href="assets/css/simpleSlider.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
+  <meta charset="UTF-8">
+  <title>BrightID | CryptoCurrency</title>
+  <link href="assets/css/foundation.min.css" rel="stylesheet">
+  <link href="assets/scss/main.css" rel="stylesheet">
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/chart.min.js"></script>
 </head>
+
 <body>
-
-
-<div class="top-bar topbar-center-logo" id="topbar-center-logo">
+  <div class="itop-bar" id="topbar-center-logo">
     <div class="top-bar-left">
-        <ul class="menu vertical medium-horizontal">
-            <li class="menu-text" style="color: #ff7315"><a href="https://www.brightid.org/" aria-current="page"
-                                                            class="logo-link w-nav-brand w--current"><img
-                    src="https://uploads-ssl.webflow.com/5e54622b3f6e65be8baf0653/5e57958e0eb38846a2658298_brightid-reversed.svg"
-                    width="100" alt="" class="logo-image"></a></li>
-        </ul>
+      <a href="https://www.brightid.org/" aria-current="page" class="logo-link w-nav-brand w--current"><img src="https://uploads-ssl.webflow.com/5e54622b3f6e65be8baf0653/5e57958e0eb38846a2658298_brightid-reversed.svg" width="100" alt="" class="logo-image"></a>
     </div>
-    <div class="top-bar-center my-top-bar">
-        <ul class="menu vertical medium-horizontal">
-            <li><a href="#">BrightID Applications</a></li>
-        </ul>
+    <div class="top-bar-center  my-top-bar ">
+      BrightID Applications
+      <!-- <ul class="menu vertical medium-horizontal">
+                <li><a href="#">BrightID Applications</a></li>
+            </ul> -->
     </div>
-
-
     <div class="top-bar-right">
-        <ul class="menu vertical medium-horizontal my-top-bar" style="font-size: 15px;">
-            <li><a href="#apps">Application</a></li>
-            <li><a href="#nodes">Nodes</a></li>
-        </ul>
+      <ul class="menu vertical medium-horizontal " style="font-size: 15px;direction: rtl;">
+        <li><a href="#nodes">Nodes</a></li>
+        <li><a href="#apps">Applications</a></li>
+        <!-- <li><a href="#topbar-center-logo">Statistics</a></li> -->
+      </ul>
     </div>
-</div>
-
-<div class="wrapper">
+  </div>
+  <div id="wrapper" class="wrapper">
+    <a class="fixed-btn-up" href="#topbar-center-logo">
+      <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="fillCurrent" fill-rule="evenodd">
+          <g id="icon-shape">
+            <polygon id="Combined-Shape" points="9 3.82842712 2.92893219 9.89949494 1.51471863 8.48528137 10 0 10.7071068 0.707106781 18.4852814 8.48528137 17.0710678 9.89949494 11 3.82842712 11 20 9 20 9 3.82842712">
+            </polygon>
+          </g>
+        </g>
+      </svg>
+    </a>
     <div class="grid-container fluid">
-
-        <div class="grid-x grid-padding-y grid-padding-x blank-div black">
-            <div class="cell small-12"></div>
+      <div class="grid-x grid-padding-y grid-padding-x chart-spanner blank-div black">
+        <div class="cell small-12 apps-section-title text-center  " style="color: #ffffff;display: flex;justify-content: center;flex-direction: column;">Statistics
         </div>
-
-        <div class="grid-x grid-padding-x  grid-margin-x   grid-padding-y grid-margin-y  charts "
-             id="charts">
-
+      </div>
+      <div class="wrapper-charts">
+        <div class="grid-x grid-padding-x  grid-margin-x   grid-padding-y grid-margin-y  charts " id="charts">
         </div>
-        <div class="grid-x grid-padding-y grid-padding-x blank-div black">
-            <div class="cell small-12"></div>
-        </div>
-
-        <div class="grid-x grid-padding-y grid-padding-x blank-div darkblue">
-            <div class="cell small-12"></div>
-        </div>
-
-        <div class="grid-x  grid-padding-y  grid-padding-x apps " id="apps">
-            <div class="cell small-12"></div>
-        </div>
-
-        <div class="grid-x grid-padding-y grid-padding-x blank-div darkblue">
-            <div class="cell small-12"></div>
-        </div>
-
-    </div>
-
-    <div class="grid-x grid-padding-y grid-padding-x blank-div black">
-        <div class="cell small-12" style="">Nodes</div>
-    </div>
-
-    <div class="grid-x  grid-padding-y  grid-padding-x nodes" id="nodes">
-
-    </div>
-
-    <div class="grid-x grid-padding-y grid-padding-x blank-div black">
+      </div>
+      <div class="grid-x grid-padding-y grid-padding-x chart-spanner  black">
+        <div class="cell small-12 "></div>
+      </div>
+      <div class="grid-x  grid-padding-y  grid-padding-x apps " id="apps">
         <div class="cell small-12"></div>
+      </div>
+      <div class="grid-x grid-padding-y grid-padding-x blank-div darkblue">
+        <div class="cell small-12"></div>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-y grid-padding-x blank-div black">
+    </div>
+    <div class="grid-x  grid-padding-y  grid-padding-x nodes" id="nodes">
+    </div>
+    <div class="grid-x grid-padding-y grid-padding-x blank-div black">
+      <div class="cell small-12"></div>
     </div>
     <div class="grid-x  grid-padding-y  grid-padding-x nodes" id="footer">
-        <div class="cell small-12 footer-part">
-            <a href="https://github.com/BrightID/BrightID-Constitution" class="text-center" style="color: #ffffff"
-               target='_blank'>
-                <p>COPYRIGHT ©
-                    BrightID Main LLC</p>
-            </a>
-        </div>
-
+      <div class="cell small-12 footer-part">
+        <a href="https://github.com/BrightID/BrightID-Constitution" class="text-center" style="color: #ffffff" target='_blank'>
+          <p>COPYRIGHT ©
+            BrightID Main LLC</p>
+        </a>
+      </div>
     </div>
-</div>
-
-</div>
-
-
-<script src="assets/js/data.js"></script>
-<script src="assets/js/simpleSlider.js"></script>
-<script src="assets/js/app.js"></script>
+  </div>
+  </div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
+
 </html>

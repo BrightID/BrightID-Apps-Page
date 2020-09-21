@@ -43,13 +43,18 @@ def read_googl_sheet():
 def uchart_gen(currentValue):
     client = pymongo.MongoClient('mongodb://localhost:27017/')
     db = client['sponsored_users']
-    uchart = {'title': 'Sponsored Uers', 'timestamps': [], 'values': []}
+    uchart = {'title': 'Sponsored Uers', 'timestamps': [0], 'values': [0]}
     for p in db.uchart.find().sort('_id'):
         uchart['timestamps'].append(
             p['_id'].generation_time.timestamp() * 1000)
         uchart['values'].append(p['value'])
     now = int(time.time() * 1000)
-    if (now - uchart['timestamps'][-1]) > 604800000:  # update weekly
+    # first point
+    if not uchart['timestamps']:
+        uchart['timestamps'].append(0)
+        uchart['values'].append(0)
+    # update weekly
+    if (now - uchart['timestamps'][-1]) > 604800000:
         db.uchart.insert_one({'value': currentValue})
         uchart['timestamps'].append(now)
         uchart['values'].append(currentValue)
@@ -61,20 +66,20 @@ def main():
     print('Updating the application page data')
 
     result = read_googl_sheet()
-    cs = requests.get(config.contexts_url).json()['data']['contexts']
+    cs = requests.get(config.apps_url).json()['data']['apps']
     sponsereds = sum([c['assignedSponsorships'] -
                       c['unusedSponsorships'] for c in cs])
-    contexts = {c['name']: c for c in cs}
+    apps = {c['name']: c for c in cs}
     for app in result['Applications']:
         app['Assigned Sponsorships'] = '_'
         app['Unused Sponsorships'] = '_'
         if not app.get('Context'):
             continue
         context_name = app.get('Context')
-        if not contexts.get(context_name):
-            print('Cannot find "{}" in the node contexts'.format(context_name))
+        if not apps.get(context_name):
+            print('Cannot find "{}" in the node apps'.format(context_name))
             continue
-        context = contexts.get(context_name)
+        context = apps.get(context_name)
         app['Assigned Sponsorships'] = context.get('assignedSponsorships')
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
 
@@ -82,17 +87,19 @@ def main():
     result['Charts'] = [uchart_gen(sponsereds)]
 
     # applications chart data
-    achart = {'title': 'Applications'}
-    achart['timestamps'] = sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Applications']])
-    achart['values'] = [i + 1 for i, t in enumerate(achart['timestamps'])]
+    achart = {'title': 'Applications', 'timestamps': [0], 'values': [0]}
+
+    achart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
+        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Applications']]))
+    achart['values'].extend([i + 1 for i, t in enumerate(achart['timestamps'])])
     result['Charts'].append(achart)
 
     # nodes chart data
-    nchart = {'title': 'Nodes'}
-    nchart['timestamps'] = sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Nodes']])
-    nchart['values'] = [i + 1 for i, t in enumerate(nchart['timestamps'])]
+    nchart = {'title': 'Nodes', 'timestamps': [0], 'values': [0]}
+
+    nchart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
+        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Nodes']]))
+    nchart['values'].extend([i + 1 for i, t in enumerate(nchart['timestamps'])])
     result['Charts'].append(nchart)
     with open(config.data_file_addr, 'w') as f:
         f.write('result = {}'.format(json.dumps(result, indent=2)))
