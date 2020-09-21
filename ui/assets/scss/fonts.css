@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../font/Roboto/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Roboto Regular;
+  src: url("../font/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url("../font/Comfortaa.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Segoe;
+  src: url("../font/SegoeUI.woff") format("truetype");
+}
+/*# sourceMappingURL=fonts.css.map */
