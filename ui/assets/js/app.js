@@ -29,9 +29,15 @@ function appsMaker(apps) {
                     </div>
                 </div>
                 <div class="assigned ">
-                    <div class="sponsorship-title ">&nbsp; Unused &nbsp;</div>
+                    <div class="sponsorship-title ">&nbsp; Available &nbsp;</div>
                     <div class="sponsorship-desc text-center">
                         <p>${app["Unused Sponsorships"]}</p>
+                    </div>
+                </div>
+                <div class="assigned ">
+                    <div class="sponsorship-title ">&nbsp; Used &nbsp;</div>
+                    <div class="sponsorship-desc text-center">
+                        <p>${app["Assigned Sponsorships"] - app["Unused Sponsorships"]}</p>
                     </div>
                 </div>
             </div>
