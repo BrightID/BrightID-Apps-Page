@@ -73,9 +73,9 @@ def main():
     for app in result['Applications']:
         app['Assigned Sponsorships'] = '_'
         app['Unused Sponsorships'] = '_'
-        if not app.get('Context'):
+        if not app.get('Application'):
             continue
-        context_name = app.get('Context')
+        context_name = app.get('Application')
         if not apps.get(context_name):
             print('Cannot find "{}" in the node apps'.format(context_name))
             continue
