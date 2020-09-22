@@ -82,6 +82,12 @@ def main():
         context = apps.get(context_name)
         app['Assigned Sponsorships'] = context.get('assignedSponsorships')
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
+        app['Used Sponsorships'] = app['Assigned Sponsorships'] - \
+            app['Unused Sponsorships']
+
+    # sort applications by used sponsorships
+    result['Applications'] = sorted(
+        result['Applications'], key=lambda i: i['Used Sponsorships'], reverse=True)
 
     # sponsored users chart data
     result['Charts'] = [uchart_gen(sponsereds)]
@@ -91,7 +97,8 @@ def main():
 
     achart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
         r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Applications']]))
-    achart['values'].extend([i + 1 for i, t in enumerate(achart['timestamps'])])
+    achart['values'].extend(
+        [i + 1 for i, t in enumerate(achart['timestamps'])])
     result['Charts'].append(achart)
 
     # nodes chart data
@@ -99,7 +106,8 @@ def main():
 
     nchart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
         r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Nodes']]))
-    nchart['values'].extend([i + 1 for i, t in enumerate(nchart['timestamps'])])
+    nchart['values'].extend(
+        [i + 1 for i, t in enumerate(nchart['timestamps'])])
     result['Charts'].append(nchart)
     with open(config.data_file_addr, 'w') as f:
         f.write('result = {}'.format(json.dumps(result, indent=2)))
