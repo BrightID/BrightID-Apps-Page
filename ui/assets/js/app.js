@@ -12,7 +12,9 @@ function appsMaker(apps) {
     let elem = `<div class="cell small-10 medium-6 large-3">
         <div class="apps-card" id="apps-card-1">
             <div class="img-wrapper">
-                <img class="img-logo" src="${app.Images[0]}">
+                <a target="_blank" href="${app.Links[0]}">
+                  <img class="img-logo" src="${app.Images[0]}">
+                </a>
             </div>
             <div class="name-wrapper">
                 <div class="name text-center">${app.Name}</div>
@@ -26,15 +28,15 @@ function appsMaker(apps) {
                     </div>
                 </div>
                 <div class="assigned">
-                    <div class="sponsorship-title">&nbsp; Available &nbsp;</div>
-                    <div class="sponsorship-desc text-center">
-                        <p>${app["Unused Sponsorships"]}</p>
-                    </div>
-                </div>
-                <div class="assigned">
                     <div class="sponsorship-title">&nbsp; Used &nbsp;</div>
                     <div class="sponsorship-desc text-center">
                         <p>${app["Assigned Sponsorships"] - app["Unused Sponsorships"]}</p>
+                    </div>
+                </div>
+                <div class="assigned">
+                    <div class="sponsorship-title">&nbsp; Available &nbsp;</div>
+                    <div class="sponsorship-desc text-center">
+                        <p>${app["Unused Sponsorships"]}</p>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,9 @@ function nodeMaker(nodes) {
         <div class="cell small-10 medium-6 large-3">
         <div class="node-card">
         <div class="img-wrapper">
-            <img class="img-logo" src="${node.Images[0]}">
+            <a target="_blank" href="${node.Links[0]}">
+                <img class="img-logo" src="${node.Images[0]}">
+            </a>
         </div>
             <div class="name text-center">${node.Name}</div>
 

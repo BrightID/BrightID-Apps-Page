@@ -43,7 +43,7 @@ def read_googl_sheet():
 def uchart_gen(currentValue):
     client = pymongo.MongoClient('mongodb://localhost:27017/')
     db = client['sponsored_users']
-    uchart = {'title': 'Sponsored Uers', 'timestamps': [0], 'values': [0]}
+    uchart = {'title': 'Sponsored Users', 'timestamps': [0], 'values': [0]}
     for p in db.uchart.find().sort('_id'):
         uchart['timestamps'].append(
             p['_id'].generation_time.timestamp() * 1000)
