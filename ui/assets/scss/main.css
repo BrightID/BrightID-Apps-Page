@@ -65,15 +65,15 @@ html {
 }
 
 .itop-bar {
-  color: #ffffff;
-  background-color: #000;
+  color: #0a0a0a;
+  background-color: #ed795d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 60px;
+  height: 100px;
 }
 
 .itop-bar a {
@@ -97,7 +97,8 @@ html {
 }
 
 .top-bar-center {
-  font-size: 25px;
+  font-size: 40px;
+  font-family: Segoe;
   text-align: center;
 }
 
@@ -137,7 +138,7 @@ html {
 }
 
 .nodes {
-  background-color: #232020;
+  background-color: #ed795d;
 }
 
 .chart-card {
@@ -223,7 +224,7 @@ html {
 }
 
 .apps-card .context,
-.node-card .context {
+.node-card .address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,7 +235,7 @@ html {
 }
 
 .apps-card .context .title,
-.node-card .context .title {
+.node-card .address .title {
   font-size: 13px;
   width: -webkit-fit-content;
   width: fit-content;
@@ -254,7 +255,7 @@ html {
 }
 
 .apps-card .context .desc-ctx,
-.node-card .context .desc-ctx {
+.node-card .address .desc-addr {
   font-family: Comfortaa;
   color: #f4f4f4;
   margin-left: 5px;
@@ -286,10 +287,8 @@ html {
   margin: auto;
 }
 
-
-
 .apps-card .desc,
-.node-card .desc {
+.node-card .testimonial {
   font-family: Comfortaa;
   color: #f4f4f4;
   margin-left: 2px;
@@ -341,8 +340,7 @@ html {
   margin: 0;
 }
 
-.apps-card .description,
-.node-card .description {
+.apps-card .description {
   margin-bottom: 10px;
   text-align: justify;
   text-justify: inter-word;
@@ -378,48 +376,6 @@ html {
   border-radius: 5px;
 }
 
-.node-card {
-  background-color: #f4f4f4;
-}
-
-.node-card .img-wrapper {
-  -webkit-box-shadow: 0px 0px 10px 0px #cacaca;
-  box-shadow: 0px 0px 10px 0px #cacaca;
-}
-
-.node-card .node-name {
-  margin-top: -20px;
-  color: #232020;
-  position: relative;
-  height: 70px;
-  text-align: center;
-  margin: 0;
-  padding: 10px 2px;
-  font-family: Segoe;
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  word-break: break-all;
-  white-space: normal;
-}
-
-.node-card .title {
-  width: -webkit-fit-content;
-  width: fit-content;
-  width: -moz-fit-content;
-  font-size: 13px;
-  color: #232020;
-  border-bottom: #ed795d 2px solid;
-}
-
-.node-card .link-item {
-  color: #232020 !important;
-}
-
-.node-card .desc {
-  color: #232020;
-}
-
 .footer-part {
   font-size: 15px;
   color: #f4f4f4;
@@ -443,7 +399,7 @@ html {
 }
 
 .grid-x {
-	justify-content: center;
+  justify-content: center;
 }
 
 @media print,

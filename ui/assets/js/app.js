@@ -7,16 +7,13 @@ function getDataService() {
 }
 
 function appsMaker(apps) {
-  let title = ' <div class="cell small-12"></div><div class="cell small-12"></div><div class="cell small-12 apps-section-title text-center "> Applications </div>';
   html = apps.map(app => {
     let link = app.Links.map(link => (`<a class="link-item" target="_blank" href="${link}">${link}</a>`))
-    let elem = `<div class="cell small-10 medium-6 large-3 ">
+    let elem = `<div class="cell small-10 medium-6 large-3">
         <div class="apps-card" id="apps-card-1">
-
             <div class="img-wrapper">
                 <img class="img-logo" src="${app.Images[0]}">
             </div>
-
             <div class="name-wrapper">
                 <div class="name text-center">${app.Name}</div>
             </div>
@@ -24,18 +21,18 @@ function appsMaker(apps) {
             <div class="number">
                 <div class="assigned ">
                     <div class="as-title ">Assigned</div>
-                    <div class="sponsorship-desc  text-center">
+                    <div class="sponsorship-desc text-center">
                         <p>${app["Assigned Sponsorships"]}</p>
                     </div>
                 </div>
-                <div class="assigned ">
-                    <div class="sponsorship-title ">&nbsp; Available &nbsp;</div>
+                <div class="assigned">
+                    <div class="sponsorship-title">&nbsp; Available &nbsp;</div>
                     <div class="sponsorship-desc text-center">
                         <p>${app["Unused Sponsorships"]}</p>
                     </div>
                 </div>
-                <div class="assigned ">
-                    <div class="sponsorship-title ">&nbsp; Used &nbsp;</div>
+                <div class="assigned">
+                    <div class="sponsorship-title">&nbsp; Used &nbsp;</div>
                     <div class="sponsorship-desc text-center">
                         <p>${app["Assigned Sponsorships"] - app["Unused Sponsorships"]}</p>
                     </div>
@@ -43,7 +40,7 @@ function appsMaker(apps) {
             </div>
 
             <div class="context">
-            <div class="title">Contex : </div>
+            <div class="title">Context: </div>
                 <div class="desc-ctx">${app.Context}</div>
             </div>
             <div class="description">
@@ -61,24 +58,24 @@ function appsMaker(apps) {
     </div>\n`
     return elem;
   })
-  $("#apps").html(title + html.join(""));
+  $("#apps").html(html.join(""));
 }
 
 function nodeMaker(nodes) {
-  let html = ' <div class="cell small-12 node-section-title text-center "> Nodes </div>';
+  let html = ' <div class="cell small-12 node-section-title text-center"> Nodes </div>';
   nodesHtml = nodes.map(node => {
     links = node.Links.map(link => (`<a class="link-item" target="_blank" href="${link}">${link}</a>`));
     nodeItem = `
-        <div class="cell small-10 medium-6  large-3">
-        <div class="node-card ">
+        <div class="cell small-10 medium-6 large-3">
+        <div class="node-card">
         <div class="img-wrapper">
             <img class="img-logo" src="${node.Images[0]}">
         </div>
-            <div class="     node-name text-center">${node.Name}</div>
+            <div class="name text-center">${node.Name}</div>
 
             <div class="address">
-                <div class="title">Node Address</div>
-                <div class="desc">${node.Address}</div>
+                <div class="title">Node Address:</div>
+                <div class="desc-addr">${node.Address}</div>
             </div>
             <div class="testimonial">
                 <div class="desc"> ${node.Testimonial}</div>
