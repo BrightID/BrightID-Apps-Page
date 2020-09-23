@@ -82,7 +82,8 @@ def main():
         context = apps.get(context_name)
         app['Assigned Sponsorships'] = context.get('assignedSponsorships')
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
-        app['order'] = app['Assigned Sponsorships'] * (app['Unused Sponsorships'] + 1)
+        app['Used Sponsorships'] = context.get('unusedSponsorships') - context.get('unusedSponsorships')
+        app['order'] = app['Assigned Sponsorships'] * (app['Used Sponsorships'] + 1)
 
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
