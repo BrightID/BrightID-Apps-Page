@@ -82,12 +82,10 @@ def main():
         context = apps.get(context_name)
         app['Assigned Sponsorships'] = context.get('assignedSponsorships')
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
-        app['Used Sponsorships'] = app['Assigned Sponsorships'] - \
-            app['Unused Sponsorships']
+        app['order'] = app['Assigned Sponsorships'] * (app['Unused Sponsorships'] + 1)
 
     # sort applications by used sponsorships
-    result['Applications'] = sorted(
-        result['Applications'], key=lambda i: i['Used Sponsorships'], reverse=True)
+    result['Applications'].sort(key=lambda i: i['order'], reverse=True)
 
     # sponsored users chart data
     result['Charts'] = [uchart_gen(sponsereds)]
