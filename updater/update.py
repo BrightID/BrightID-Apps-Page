@@ -96,7 +96,7 @@ def main():
     achart = {'title': 'Applications', 'timestamps': [0], 'values': [0]}
 
     achart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Applications']]))
+        r['Joined'], "%m/%d/%Y").timetuple()) for r in result['Applications']]))
     achart['values'].extend(
         [i + 1 for i, t in enumerate(achart['timestamps'])])
     result['Charts'].append(achart)
@@ -105,7 +105,7 @@ def main():
     nchart = {'title': 'Nodes', 'timestamps': [0], 'values': [0]}
 
     nchart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined At'], "%m/%d/%Y").timetuple()) for r in result['Nodes']]))
+        r['Joined'], "%m/%d/%Y").timetuple()) for r in result['Nodes']]))
     nchart['values'].extend(
         [i + 1 for i, t in enumerate(nchart['timestamps'])])
     result['Charts'].append(nchart)
