@@ -34,9 +34,9 @@ function appsMaker(apps) {
                     </div>
                 </div>
                 <div class="assigned">
-                    <div class="sponsorship-title">&nbsp; Available &nbsp;</div>
+                    <div class="sponsorship-title">&nbsp;Verified users &nbsp;</div>
                     <div class="sponsorship-desc text-center">
-                        <p>${app["Unused Sponsorships"]}</p>
+                        <p>${app["users"]}</p>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,10 @@ function chartsMaker(charts) {
   for (let i = 0; i < charts.length; i++) {
     let step_size = 1;
     if (i === 0) {
-      step_size = 5;
+      step_size = Math.ceil((Math.max(...charts[i].values) / 6) / 100) * 100;
+    }
+    if (i === 1) {
+      step_size = Math.ceil(Math.max(...charts[i].values) / 6);
     }
     charTools(
       document.getElementById("chart-" + i).getContext("2d"),
@@ -125,15 +128,27 @@ function chartsMaker(charts) {
   }
 }
 
+function convertDate(ts) {
+  var date_ob = new Date(ts * 1000);
+  let month = date_ob.toLocaleString('default', { month: 'short' });
+  let date = date_ob.getDate();
+  return `${month} ${date}`
+}
+
 function charTools(ctx, data_label, data_value, step_size) {
   background_color = "#232020";
   border_color = "#ed795d";
   border_width = 4;
+  fmtLabel = [];
+  for (let i = 0; i < data_label.length; i++) {
+    fmtLabel.push(convertDate(data_label[i]))
+  }
   let chart = new Chart(ctx, {
     type: "line",
     data: {
-      labels: data_label,
+      labels: fmtLabel,
       datasets: [{
+        lineTension: false,
         fill: false,
         backgroundColor: background_color,
         borderColor: border_color,
@@ -172,11 +187,12 @@ function charTools(ctx, data_label, data_value, step_size) {
         xAxes: [{
           ticks: {
             stepSize: 5,
-            display: false,
-            beginAtZero: true,
+            display: true,
+            // beginAtZero: true,
+            autoSkip: false,
           },
           gridLines: {
-            display: true,
+            display: false,
             drawBorder: false,
           },
         }, ],

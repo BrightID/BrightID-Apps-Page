@@ -1,6 +1,8 @@
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
+from dateutil import relativedelta
+from urllib.parse import urljoin
 import requests
 import datetime
 import os.path
@@ -9,6 +11,12 @@ import pickle
 import config
 import json
 import time
+
+
+def num_linked_users(context):
+    url = urljoin(config.verifications_url, context)
+    users = requests.get(url).json()['data']['contextIds']
+    return len(users)
 
 
 def read_googl_sheet():
@@ -40,15 +48,16 @@ def read_googl_sheet():
     return results
 
 
-def uchart_gen(currentValue):
+def uchart_gen(currentValue, timestamps):
     client = pymongo.MongoClient('mongodb://localhost:27017/')
     db = client['sponsored_users']
-    uchart = {'title': 'Sponsored Users', 'timestamps': [0], 'values': [0]}
-    for p in db.uchart.find().sort('_id'):
-        uchart['timestamps'].append(
-            p['_id'].generation_time.timestamp() * 1000)
-        uchart['values'].append(p['value'])
-    now = int(time.time() * 1000)
+    uchart = {'title': 'Sponsored Users',
+              'timestamps': timestamps, 'values': [0] * 6}
+    for p in db.uchart.find().sort('_id', -1):
+        for i, t in enumerate(timestamps):
+            if p['_id'].generation_time.timestamp() <= t and uchart['values'][i] == 0:
+                uchart['values'][i] = p['value']
+    now = int(time.time())
     # first point
     if not uchart['timestamps']:
         uchart['timestamps'].append(0)
@@ -82,31 +91,42 @@ def main():
         context = apps.get(context_name)
         app['Assigned Sponsorships'] = context.get('assignedSponsorships')
         app['Unused Sponsorships'] = context.get('unusedSponsorships')
-        app['Used Sponsorships'] = context.get('assignedSponsorships') - context.get('unusedSponsorships')
-        app['order'] = app['Assigned Sponsorships'] * (app['Used Sponsorships'] + 1)
+        app['Used Sponsorships'] = context.get(
+            'assignedSponsorships') - context.get('unusedSponsorships')
+        app['order'] = app['Assigned Sponsorships'] * \
+            (app['Used Sponsorships'] + 1)
+        app['users'] = num_linked_users(app.get('Context'))
 
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
 
+    timestamps = []
+    for i in range(6):
+        pm = datetime.date.today() - relativedelta.relativedelta(months=i)
+        timestamps.insert(0, time.mktime(pm.timetuple()))
+
     # sponsored users chart data
-    result['Charts'] = [uchart_gen(sponsereds)]
+    result['Charts'] = [uchart_gen(sponsereds, timestamps)]
 
     # applications chart data
-    achart = {'title': 'Applications', 'timestamps': [0], 'values': [0]}
-
-    achart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined'], "%m/%d/%Y").timetuple()) for r in result['Applications']]))
-    achart['values'].extend(
-        [i + 1 for i, t in enumerate(achart['timestamps'])])
+    achart = {'title': 'Applications',
+              'timestamps': timestamps, 'values': [0] * 6}
+    for app in result['Applications']:
+        joined_timestamp = time.mktime(datetime.datetime.strptime(
+            app['Joined'], "%m/%d/%Y").timetuple())
+        for i, t in enumerate(timestamps):
+            if joined_timestamp <= t:
+                achart['values'][i] += 1
     result['Charts'].append(achart)
 
     # nodes chart data
-    nchart = {'title': 'Nodes', 'timestamps': [0], 'values': [0]}
-
-    nchart['timestamps'].extend(sorted([time.mktime(datetime.datetime.strptime(
-        r['Joined'], "%m/%d/%Y").timetuple()) for r in result['Nodes']]))
-    nchart['values'].extend(
-        [i + 1 for i, t in enumerate(nchart['timestamps'])])
+    nchart = {'title': 'Nodes', 'timestamps': timestamps, 'values': [0] * 6}
+    for node in result['Nodes']:
+        joined_timestamp = time.mktime(datetime.datetime.strptime(
+            node['Joined'], "%m/%d/%Y").timetuple())
+        for i, t in enumerate(timestamps):
+            if joined_timestamp <= t:
+                nchart['values'][i] += 1
     result['Charts'].append(nchart)
     with open(config.data_file_addr, 'w') as f:
         f.write('result = {}'.format(json.dumps(result, indent=2)))
