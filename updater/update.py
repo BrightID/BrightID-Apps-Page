@@ -1,7 +1,6 @@
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
-from dateutil import relativedelta
 from urllib.parse import urljoin
 import requests
 import datetime
@@ -19,7 +18,7 @@ def num_linked_users(context):
     return len(users)
 
 
-def read_googl_sheet():
+def read_google_sheet():
     creds = None
     if os.path.exists('token.pickle'):
         with open(config.token_file_addr, 'rb') as token:
@@ -51,22 +50,21 @@ def read_googl_sheet():
 def uchart_gen(currentValue, timestamps):
     client = pymongo.MongoClient('mongodb://localhost:27017/')
     db = client['sponsored_users']
+    points = list(db.uchart.find().sort('_id', -1))
+    now = int(time.time())
+    # update db
+    if (now - points[0]['_id'].generation_time.timestamp()) > config.sponsoreds_snapshot_period:
+        db.uchart.insert_one({'value': currentValue})
+    else:
+        db.uchart.replace_one({"_id": points[0]['_id']}, {'value': currentValue})
+    # generate chart data
     uchart = {'title': 'Sponsored Users',
               'timestamps': timestamps, 'values': [0] * 6}
     for p in db.uchart.find().sort('_id', -1):
         for i, t in enumerate(timestamps):
             if p['_id'].generation_time.timestamp() <= t and uchart['values'][i] == 0:
                 uchart['values'][i] = p['value']
-    now = int(time.time())
-    # first point
-    if not uchart['timestamps']:
-        uchart['timestamps'].append(0)
-        uchart['values'].append(0)
-    # update weekly
-    if (now - uchart['timestamps'][-1]) > 604800000:
-        db.uchart.insert_one({'value': currentValue})
-        uchart['timestamps'].append(now)
-        uchart['values'].append(currentValue)
+    points = list(db.uchart.find().sort('_id', -1))
     client.close()
     return uchart
 
@@ -74,7 +72,7 @@ def uchart_gen(currentValue, timestamps):
 def main():
     print('Updating the application page data')
 
-    result = read_googl_sheet()
+    result = read_google_sheet()
     cs = requests.get(config.apps_url).json()['data']['apps']
     sponsereds = sum([c['assignedSponsorships'] -
                       c['unusedSponsorships'] for c in cs])
@@ -102,8 +100,9 @@ def main():
 
     timestamps = []
     for i in range(6):
-        pm = datetime.date.today() - relativedelta.relativedelta(months=i)
-        timestamps.insert(0, time.mktime(pm.timetuple()))
+        now = time.time()
+        pw = now - i * config.chart_step
+        timestamps.insert(0, pw)
 
     # sponsored users chart data
     result['Charts'] = [uchart_gen(sponsereds, timestamps)]

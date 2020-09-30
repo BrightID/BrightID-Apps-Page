@@ -5,3 +5,5 @@ apps_url = 'http://node.brightid.org/brightid/v5/apps'
 verifications_url = 'http://node.brightid.org/brightid/v5/verifications/'
 data_file_addr = ''
 token_file_addr = ''
+sponsoreds_snapshot_period = 86400
+chart_step = 604800
