@@ -420,6 +420,43 @@ html {
     display: flex;
     font-size: 150%;
   }
+  .blank-div {
+    display: none;
+  }
+  #statistics {
+    display: block;
+  }
+  #apps,
+  #nodes {
+    padding-bottom: 15px;
+  }
+  .node-section-title,
+  .apps-section-title {
+    margin: 0;
+  }
+  .grid-x > .small-10 {
+    width: 90%;
+  }
+  .apps-card,
+  .node-card {
+    padding: 25px 25px 100px 25px;
+  }
+  .address {
+    flex-direction: column;
+  }
+  .desc-addr {
+    margin-top: 10px;
+  }
+  .apps-card .links,
+  .node-card .links {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
