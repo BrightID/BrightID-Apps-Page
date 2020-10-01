@@ -93,7 +93,7 @@ html {
 
 .top-bar-left {
   text-align: left;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .top-bar-center {
@@ -213,14 +213,20 @@ html {
 
 .apps-card .name::after,
 .node-card .name::after {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#232020));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(255, 255, 255, 0)),
+    to(#232020)
+  );
   background: linear-gradient(90deg, rgba(255, 255, 255, 0), #232020);
   position: absolute;
   bottom: 0;
   right: 0;
   width: 150px;
   height: 70px;
-  content: '';
+  content: "";
 }
 
 .apps-card .context,
@@ -402,11 +408,17 @@ html {
   justify-content: center;
 }
 
-@media print,
-screen and (min-width: 40em) {
-  .grid-padding-y>.cell {
-    padding-right: .4rem;
-    padding-left: .4rem;
+@media print, screen and (min-width: 40em) {
+  .grid-padding-y > .cell {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .top-bar-center {
+    display: flex;
+    font-size: 150%;
   }
 }
 
