@@ -71,26 +71,28 @@ def uchart_gen(currentValue, timestamps):
 
 def main():
     print('Updating the application page data')
-
-    result = read_google_sheet()
     cs = requests.get(config.apps_url).json()['data']['apps']
     sponsereds = sum([c['assignedSponsorships'] -
                       c['unusedSponsorships'] for c in cs])
-    apps = {c['name']: c for c in cs}
+    node_apps = {c['id']: c for c in cs}
+
+    result = read_google_sheet()
     for app in result['Applications']:
         app['Assigned Sponsorships'] = '_'
         app['Unused Sponsorships'] = '_'
+        app['users'] = '_'
+        app['order'] = 0
         if not app.get('Application'):
             continue
-        context_name = app.get('Application')
-        if not apps.get(context_name):
-            print('Cannot find "{}" in the node apps'.format(context_name))
+        app_name = app.get('Application')
+        if not node_apps.get(app_name):
+            print('Cannot find "{}" in the node data'.format(app_name))
             continue
-        context = apps.get(context_name)
-        app['Assigned Sponsorships'] = context.get('assignedSponsorships')
-        app['Unused Sponsorships'] = context.get('unusedSponsorships')
-        app['Used Sponsorships'] = context.get(
-            'assignedSponsorships') - context.get('unusedSponsorships')
+        node_app = node_apps.get(app_name)
+        app['Assigned Sponsorships'] = node_app.get('assignedSponsorships')
+        app['Unused Sponsorships'] = node_app.get('unusedSponsorships')
+        app['Used Sponsorships'] = node_app.get(
+            'assignedSponsorships') - node_app.get('unusedSponsorships')
         app['order'] = app['Assigned Sponsorships'] * \
             (app['Used Sponsorships'] + 1)
         app['users'] = num_linked_users(app.get('Context'))
