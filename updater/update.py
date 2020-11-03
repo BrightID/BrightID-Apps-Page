@@ -130,7 +130,7 @@ def main():
                 nchart['values'][i] += 1
     result['Charts'].append(nchart)
     with open(config.data_file_addr, 'w') as f:
-        f.write('result = {}'.format(json.dumps(result, indent=2)))
+        f.write(json.dumps(result, indent=2))
 
 
 if __name__ == '__main__':

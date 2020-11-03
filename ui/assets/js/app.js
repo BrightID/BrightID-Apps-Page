@@ -1,10 +1,17 @@
-getDataService();
-
-function getDataService() {
-  chartsMaker(result.Charts);
-  appsMaker(result.Applications);
-  nodeMaker(result.Nodes);
-}
+$(document).ready(function () {
+  $.get("apps.json", function (data) {
+    chartsMaker(data.Charts);
+    appsMaker(data.Applications);
+    nodeMaker(data.Nodes);
+  });
+  if (window.innerWidth < 900) {
+    $(".cell").addClass("float-center")
+    $("#topbar-center-logo").height("120px")
+  } else {
+    chartsHeight = $(".wrapper-charts").height()
+    $(".chart-spanner").height((window.innerHeight - chartsHeight) / 2 + "px")
+  }
+});
 
 function appsMaker(apps) {
   html = apps.map(app => {
@@ -199,12 +206,4 @@ function charTools(ctx, data_label, data_value, step_size) {
       },
     },
   });
-}
-
-if (window.innerWidth < 900) {
-  $(".cell").addClass("float-center")
-  $("#topbar-center-logo").height("120px")
-} else {
-  chartsHeight = $(".wrapper-charts").height()
-  $(".chart-spanner").height((window.innerHeight - chartsHeight) / 2 + "px")
 }
