@@ -1,7 +1,6 @@
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
-from urllib.parse import urljoin
 import requests
 import datetime
 import os.path
@@ -13,9 +12,12 @@ import time
 
 
 def num_linked_users(context):
-    url = urljoin(config.verifications_url, context)
-    users = requests.get(url).json()['data']['contextIds']
-    return len(users)
+    url = config.verifications_url.format(context)
+    res = requests.get(url).json()
+    if res['error']:
+        print(f"Error in getting {context} verifications: ", res)
+        return '_'
+    return res['data']['count']
 
 
 def read_google_sheet():
