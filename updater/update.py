@@ -14,7 +14,7 @@ import time
 def num_linked_users(context):
     url = config.verifications_url.format(context)
     res = requests.get(url).json()
-    if res['error']:
+    if res.get('error', False):
         print(f"Error in getting {context} verifications: ", res)
         return '_'
     return res['data']['count']
