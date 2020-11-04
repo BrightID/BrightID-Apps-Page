@@ -72,7 +72,7 @@ def uchart_gen(currentValue, timestamps):
 
 
 def main():
-    print('Updating the application page data')
+    print('Updating the application page data.', time.ctime())
     cs = requests.get(config.apps_url).json()['data']['apps']
     sponsereds = sum([c['assignedSponsorships'] -
                       c['unusedSponsorships'] for c in cs])
