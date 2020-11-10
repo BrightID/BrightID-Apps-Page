@@ -98,6 +98,7 @@ def main():
         app['order'] = app['Assigned Sponsorships'] * \
             (app['Used Sponsorships'] + 1)
         app['users'] = num_linked_users(app.get('Context'))
+        app['name'] = node_app.get('name')
 
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
