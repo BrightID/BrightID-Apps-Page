@@ -84,13 +84,13 @@ def main():
         app['Unused Sponsorships'] = '_'
         app['users'] = '_'
         app['order'] = 0
-        if not app.get('Application'):
+        if not app.get('Key'):
             continue
-        app_name = app.get('Application')
-        if not node_apps.get(app_name):
-            print('Cannot find "{}" in the node data'.format(app_name))
+        key = app.get('Key')
+        if not node_apps.get(key):
+            print('Cannot find "{}" in the node data'.format(key))
             continue
-        node_app = node_apps.get(app_name)
+        node_app = node_apps.get(key)
         app['Assigned Sponsorships'] = node_app.get('assignedSponsorships')
         app['Unused Sponsorships'] = node_app.get('unusedSponsorships')
         app['Used Sponsorships'] = node_app.get(
@@ -98,7 +98,6 @@ def main():
         app['order'] = app['Assigned Sponsorships'] * \
             (app['Used Sponsorships'] + 1)
         app['users'] = num_linked_users(app.get('Context'))
-        app['name'] = node_app.get('name')
 
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
