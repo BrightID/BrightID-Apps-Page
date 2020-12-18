@@ -101,8 +101,8 @@ def xticks_generator():
     now = int(time.time())
     for i in range(config.x_ticks[0]):
         pw = now - i * config.x_ticks[1]
-        # July 1, 2020
-        if pw < 1593565200:
+        # Jun 1, 2020
+        if pw < 1590973200:
             break
         xticks['labels'].insert(0, '' if i % 2 != 0 else pw)
         xticks['values'].insert(0, pw)
