@@ -3,7 +3,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 import requests
 import datetime
-import os.path
+import os
 import pymongo
 import pickle
 import config
@@ -12,15 +12,15 @@ import time
 
 
 def num_linked_users(context):
-    url = config.verifications_url.format(context)
+    url = config.linked_users_url.format(context)
     res = requests.get(url).json()
     if res.get('error', False):
-        print(f"Error in getting {context} verifications: ", res)
+        print(f'Error in getting linked users of {context}: {res}')
         return '_'
     return res['data']['count']
 
 
-def read_google_sheet():
+def read_google_sheets():
     creds = None
     if os.path.exists('token.pickle'):
         with open(config.token_file_addr, 'rb') as token:
@@ -49,7 +49,7 @@ def read_google_sheet():
     return results
 
 
-def uchart_gen(currentValue, timestamps):
+def uchart_generator(currentValue, xticks):
     client = pymongo.MongoClient('mongodb://localhost:27017/')
     db = client['sponsored_users']
     points = list(db.uchart.find().sort('_id', -1))
@@ -58,12 +58,13 @@ def uchart_gen(currentValue, timestamps):
     if (now - points[0]['_id'].generation_time.timestamp()) > config.sponsoreds_snapshot_period:
         db.uchart.insert_one({'value': currentValue})
     else:
-        db.uchart.replace_one({"_id": points[0]['_id']}, {'value': currentValue})
+        db.uchart.replace_one({"_id": points[0]['_id']}, {
+                              'value': currentValue})
     # generate chart data
     uchart = {'title': 'Sponsored Users',
-              'timestamps': timestamps, 'values': [0] * 6}
+              'timestamps': xticks['labels'], 'values': [0] * len(xticks['labels'])}
     for p in db.uchart.find().sort('_id', -1):
-        for i, t in enumerate(timestamps):
+        for i, t in enumerate(xticks['values']):
             if p['_id'].generation_time.timestamp() <= t and uchart['values'][i] == 0:
                 uchart['values'][i] = p['value']
     points = list(db.uchart.find().sort('_id', -1))
@@ -71,30 +72,66 @@ def uchart_gen(currentValue, timestamps):
     return uchart
 
 
+def achart_generator(apps, xticks):
+    achart = {'title': 'Applications', 'timestamps': xticks['labels'], 'values': [
+        0] * len(xticks['labels'])}
+    for app in apps:
+        joined_timestamp = time.mktime(datetime.datetime.strptime(
+            app['Joined'], "%m/%d/%Y").timetuple())
+        for i, t in enumerate(xticks['values']):
+            if joined_timestamp <= t:
+                achart['values'][i] += 1
+    return achart
+
+
+def nchart_generator(nodes, xticks):
+    nchart = {'title': 'Nodes', 'timestamps': xticks['labels'], 'values': [
+        0] * len(xticks['labels'])}
+    for node in nodes:
+        joined_timestamp = time.mktime(datetime.datetime.strptime(
+            node['Joined'], "%m/%d/%Y").timetuple())
+        for i, t in enumerate(xticks['values']):
+            if joined_timestamp <= t:
+                nchart['values'][i] += 1
+    return nchart
+
+
+def xticks_generator():
+    xticks = {'labels': [], 'values': []}
+    now = int(time.time())
+    for i in range(config.x_ticks[0]):
+        pw = now - i * config.x_ticks[1]
+        # July 1, 2020
+        if pw < 1593565200:
+            break
+        xticks['labels'].insert(0, '' if i % 2 != 0 else pw)
+        xticks['values'].insert(0, pw)
+    return xticks
+
+
 def main():
     print('Updating the application page data.', time.ctime())
-    cs = requests.get(config.apps_url).json()['data']['apps']
-    sponsereds = sum([c['assignedSponsorships'] -
-                      c['unusedSponsorships'] for c in cs])
-    node_apps = {c['id']: c for c in cs}
+    node_apps = requests.get(config.apps_url).json()['data']['apps']
+    sponsereds = sum([node_app['assignedSponsorships'] -
+                      node_app['unusedSponsorships'] for node_app in node_apps])
+    node_apps = {node_app['id']: node_app for node_app in node_apps}
 
-    result = read_google_sheet()
+    result = read_google_sheets()
     for app in result['Applications']:
-        app['Assigned Sponsorships'] = '_'
-        app['Unused Sponsorships'] = '_'
-        app['users'] = '_'
-        app['order'] = 0
+        app.update({'Assigned Sponsorships': '_',
+                    'Unused Sponsorships': '_', 'users': '_', 'order': 0})
         if not app.get('Key'):
             continue
+
         key = app.get('Key')
         if not node_apps.get(key):
             print('Cannot find "{}" in the node data'.format(key))
             continue
+
         node_app = node_apps.get(key)
-        app['Assigned Sponsorships'] = node_app.get('assignedSponsorships')
-        app['Unused Sponsorships'] = node_app.get('unusedSponsorships')
-        app['Used Sponsorships'] = node_app.get(
-            'assignedSponsorships') - node_app.get('unusedSponsorships')
+        app['Assigned Sponsorships'] = node_app.get('assignedSponsorships', 0)
+        app['Unused Sponsorships'] = node_app.get('unusedSponsorships', 0)
+        app['Used Sponsorships'] = app['Assigned Sponsorships'] - app['Unused Sponsorships']
         app['order'] = app['Assigned Sponsorships'] * \
             (app['Used Sponsorships'] + 1)
         app['users'] = num_linked_users(app.get('Context'))
@@ -102,35 +139,21 @@ def main():
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
 
-    timestamps = []
-    for i in range(6):
-        now = time.time()
-        pw = now - i * config.chart_step
-        timestamps.insert(0, pw)
+    result['Charts'] = []
+    xticks = xticks_generator()
 
     # sponsored users chart data
-    result['Charts'] = [uchart_gen(sponsereds, timestamps)]
+    uchart = uchart_generator(sponsereds, xticks)
+    result['Charts'].append(uchart)
 
     # applications chart data
-    achart = {'title': 'Applications',
-              'timestamps': timestamps, 'values': [0] * 6}
-    for app in result['Applications']:
-        joined_timestamp = time.mktime(datetime.datetime.strptime(
-            app['Joined'], "%m/%d/%Y").timetuple())
-        for i, t in enumerate(timestamps):
-            if joined_timestamp <= t:
-                achart['values'][i] += 1
+    achart = achart_generator(result['Applications'], xticks)
     result['Charts'].append(achart)
 
     # nodes chart data
-    nchart = {'title': 'Nodes', 'timestamps': timestamps, 'values': [0] * 6}
-    for node in result['Nodes']:
-        joined_timestamp = time.mktime(datetime.datetime.strptime(
-            node['Joined'], "%m/%d/%Y").timetuple())
-        for i, t in enumerate(timestamps):
-            if joined_timestamp <= t:
-                nchart['values'][i] += 1
+    nchart = nchart_generator(result['Nodes'], xticks)
     result['Charts'].append(nchart)
+
     with open(config.data_file_addr, 'w') as f:
         f.write(json.dumps(result, indent=2))
 
