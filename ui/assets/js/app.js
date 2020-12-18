@@ -200,6 +200,8 @@ function charTools(ctx, data_label, data_value, step_size) {
                         display: true,
                         // beginAtZero: true,
                         autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 45
                     },
                     gridLines: {
                         display: false,
