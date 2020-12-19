@@ -131,9 +131,10 @@ def main():
         node_app = node_apps.get(key)
         app['Assigned Sponsorships'] = node_app.get('assignedSponsorships', 0)
         app['Unused Sponsorships'] = node_app.get('unusedSponsorships', 0)
-        app['Used Sponsorships'] = app['Assigned Sponsorships'] - app['Unused Sponsorships']
+        app['Used Sponsorships'] = app['Assigned Sponsorships'] - \
+            app['Unused Sponsorships']
         app['order'] = app['Assigned Sponsorships'] * \
-            (app['Used Sponsorships'] + 1)
+            max(app['Used Sponsorships'], 1)
         app['users'] = num_linked_users(app.get('Context'))
 
     # sort applications by used sponsorships
