@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 function appsMaker(apps) {
     html = apps.map(app => {
-        if (app.Testing != 'TRUE') {
+        if (!app.Testing) {
             let link = app.Links.map(link => (`<a class="link-item" target="_blank" href="${link}">${link}</a>`));
             let elem = `
                 <div class="cell small-10 medium-6 large-3">

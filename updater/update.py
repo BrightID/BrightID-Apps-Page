@@ -46,6 +46,8 @@ def read_google_sheets():
             for key in d:
                 if key in ['Images', 'Links']:
                     d[key] = d[key].split('\n')
+                if key == 'Testing':
+                    d[key] = d[key] == 'TRUE'
     return results
 
 
@@ -76,7 +78,7 @@ def achart_generator(apps, xticks):
     achart = {'title': 'Applications', 'timestamps': xticks['labels'], 'values': [
         0] * len(xticks['labels'])}
     for app in apps:
-        if app['Testing'] == 'TRUE':
+        if app['Testing']:
             continue
         joined_timestamp = time.mktime(datetime.datetime.strptime(
             app['Joined'], "%m/%d/%Y").timetuple())
