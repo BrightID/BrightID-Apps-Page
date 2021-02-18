@@ -15,57 +15,59 @@ $(document).ready(function() {
 
 function appsMaker(apps) {
     html = apps.map(app => {
-        let link = app.Links.map(link => (`<a class="link-item" target="_blank" href="${link}">${link}</a>`));
-        let elem = `
-    <div class="cell small-10 medium-6 large-3">
-      <div class="apps-card" id="apps-card-1">
-        <div class="img-wrapper">
-          <a target="_blank" href="${app.Links[0]}">
-            <img class="img-logo" src="${app.Images[0]}">
-          </a>
-        </div>
-        <div class="name-wrapper">
-          <div class="name text-center">${app.Name}</div>
-        </div>
-        <div class="text-center float-center sponsorship">Sponsorships</div>
-        <div class="number">
-          <div class="assigned ">
-            <div class="as-title ">Assigned</div>
-            <div class="sponsorship-desc text-center">
-              <p>${app["Assigned Sponsorships"]}</p>
-            </div>
-          </div>
-          <div class="assigned">
-            <div class="sponsorship-title">&nbsp; Used &nbsp;</div>
-            <div class="sponsorship-desc text-center">
-              <p>${app["Assigned Sponsorships"] - app["Unused Sponsorships"]}</p>
-            </div>
-          </div>
-          <div class="assigned">
-            <div class="sponsorship-title">&nbsp;Verified users &nbsp;</div>
-            <div class="sponsorship-desc text-center">
-              <p>${app["users"]}</p>
-            </div>
-          </div>
-        </div>
-        <div class="context">
-        <div class="title">Context: </div>
-          <div class="desc-ctx">${app.Context}</div>
-        </div>
-        <div class="description">
-          <div class="desc">${app.Description}</div>
-        </div>
-        <div class="testimonial">
-          <div class="desc"> ${app.Testimonial}</div>
-        </div>
-        <div class="links">
-          <div class="desc">
-            ${link.join("")}
-          </div>
-        </div>
-      </div>
-    </div>\n`;
-        return elem;
+        if (app.Testing != 'TRUE') {
+            let link = app.Links.map(link => (`<a class="link-item" target="_blank" href="${link}">${link}</a>`));
+            let elem = `
+                <div class="cell small-10 medium-6 large-3">
+                  <div class="apps-card" id="apps-card-1">
+                    <div class="img-wrapper">
+                      <a target="_blank" href="${app.Links[0]}">
+                        <img class="img-logo" src="${app.Images[0]}">
+                      </a>
+                    </div>
+                    <div class="name-wrapper">
+                      <div class="name text-center">${app.Name}</div>
+                    </div>
+                    <div class="text-center float-center sponsorship">Sponsorships</div>
+                    <div class="number">
+                      <div class="assigned ">
+                        <div class="as-title ">Assigned</div>
+                        <div class="sponsorship-desc text-center">
+                          <p>${app["Assigned Sponsorships"]}</p>
+                        </div>
+                      </div>
+                      <div class="assigned">
+                        <div class="sponsorship-title">&nbsp; Used &nbsp;</div>
+                        <div class="sponsorship-desc text-center">
+                          <p>${app["Assigned Sponsorships"] - app["Unused Sponsorships"]}</p>
+                        </div>
+                      </div>
+                      <div class="assigned">
+                        <div class="sponsorship-title">&nbsp;Verified users &nbsp;</div>
+                        <div class="sponsorship-desc text-center">
+                          <p>${app["users"]}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="context">
+                    <div class="title">Context: </div>
+                      <div class="desc-ctx">${app.Context}</div>
+                    </div>
+                    <div class="description">
+                      <div class="desc">${app.Description}</div>
+                    </div>
+                    <div class="testimonial">
+                      <div class="desc"> ${app.Testimonial}</div>
+                    </div>
+                    <div class="links">
+                      <div class="desc">
+                        ${link.join("")}
+                      </div>
+                    </div>
+                  </div>
+                </div>\n`;
+            return elem;
+        }
     })
     $("#apps").html(html.join(""));
 }

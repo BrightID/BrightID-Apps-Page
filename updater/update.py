@@ -76,6 +76,8 @@ def achart_generator(apps, xticks):
     achart = {'title': 'Applications', 'timestamps': xticks['labels'], 'values': [
         0] * len(xticks['labels'])}
     for app in apps:
+        if app['Testing'] == 'TRUE':
+            continue
         joined_timestamp = time.mktime(datetime.datetime.strptime(
             app['Joined'], "%m/%d/%Y").timetuple())
         for i, t in enumerate(xticks['values']):
