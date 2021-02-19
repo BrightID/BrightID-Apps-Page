@@ -122,8 +122,7 @@ def main():
 
     result = read_google_sheets()
     for app in result['Applications']:
-        app.update({'Assigned Sponsorships': '_',
-                    'Unused Sponsorships': '_', 'users': '_', 'order': 0})
+        app.update({'Assigned Sponsorships': '_', 'Unused Sponsorships': '_', 'Used Sponsorships': '_','users': '_', 'order': 0})
         if not app.get('Key'):
             continue
 
