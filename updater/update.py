@@ -44,7 +44,7 @@ def read_google_sheets():
         results[sheet_name] = [dict(zip(rows[0], row)) for row in rows[1:]]
         for d in results[sheet_name]:
             for key in d:
-                if key in ['Images', 'Links']:
+                if key in ['Images', 'Links', 'Verifications']:
                     d[key] = d[key].split('\n')
                 if key in ['Testing', 'Local Filter', 'Using Blind Sig', 'Ids As Hex']:
                     d[key] = d[key] == 'TRUE'
