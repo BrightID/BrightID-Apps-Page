@@ -45,7 +45,7 @@ def read_google_sheets():
         for d in results[sheet_name]:
             for key in d:
                 if key in ['Images', 'Links', 'Verifications']:
-                    d[key] = d[key].split('\n')
+                    d[key] = list(filter(None, d[key].split('\n')))
                 if key in ['Testing', 'Local Filter', 'Using Blind Sig', 'Ids As Hex']:
                     d[key] = d[key] == 'TRUE'
     return results
