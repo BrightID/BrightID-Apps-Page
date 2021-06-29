@@ -10,7 +10,6 @@ googleapis-common-protos==1.51.0
 httplib2==0.17.0
 idna==2.9
 oauthlib==3.1.0
-pkg-resources==0.0.0
 protobuf==3.11.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
@@ -22,3 +21,4 @@ six==1.14.0
 uritemplate==3.0.1
 urllib3==1.25.8
 pymongo==3.11.0
+python-dateutil==2.8.1

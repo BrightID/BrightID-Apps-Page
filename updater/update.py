@@ -1,6 +1,7 @@
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
+from dateutil.relativedelta import relativedelta
 import requests
 import datetime
 import os
@@ -102,14 +103,15 @@ def nchart_generator(nodes, xticks):
 
 def xticks_generator():
     xticks = {'labels': [], 'values': []}
-    now = int(time.time())
-    for i in range(config.x_ticks[0]):
-        pw = now - i * config.x_ticks[1]
+    today = datetime.date.today()
+    xticks['labels'].insert(0, int(time.mktime(today.timetuple())))
+    xticks['values'].insert(0, int(time.mktime(today.timetuple())))
+    for i in range(1, 12):
+        first = today + relativedelta(months=(-1 * i))
         # Jun 1, 2020
-        if pw < 1590973200:
-            break
-        xticks['labels'].insert(0, '' if i % 2 != 0 else pw)
-        xticks['values'].insert(0, pw)
+        if int(time.mktime(first.timetuple())) > 1590973200:
+            xticks['labels'].insert(0, int(time.mktime(first.timetuple())))
+            xticks['values'].insert(0, int(time.mktime(first.timetuple())))
     return xticks
 
 
@@ -122,7 +124,8 @@ def main():
 
     result = read_google_sheets()
     for app in result['Applications']:
-        app.update({'Assigned Sponsorships': '_', 'Unused Sponsorships': '_', 'Used Sponsorships': '_','users': '_', 'order': 0})
+        app.update({'Assigned Sponsorships': '_', 'Unused Sponsorships': '_',
+                    'Used Sponsorships': '_', 'users': '_', 'order': 0})
         if not app.get('Key'):
             continue
 

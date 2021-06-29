@@ -6,4 +6,3 @@ linked_users_url = 'http://node.brightid.org/brightid/v5/verifications/{}?count_
 data_file_addr = '../ui/apps.json'
 token_file_addr = ''
 sponsoreds_snapshot_period = 86400
-x_ticks = (24, (15 * 24 * 60 * 60))
