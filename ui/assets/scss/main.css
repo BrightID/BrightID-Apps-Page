@@ -263,6 +263,37 @@ html {
   font-weight: 400;
 }
 
+.node-card .signing-key {
+  margin-bottom: 20px;
+}
+
+.node-card .signing-key .title {
+  font-size: 13px;
+  width: -webkit-fit-content;
+  width: fit-content;
+  font-family: Comfortaa;
+  width: -moz-fit-content;
+  color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.node-card .signing-key .desc-signing-key {
+  font-family: Comfortaa;
+  color: #f4f4f4;
+  margin-left: 5px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
 .apps-card .img-wrapper,
 .node-card .img-wrapper {
   position: relative;
