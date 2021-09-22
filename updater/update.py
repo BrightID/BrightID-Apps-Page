@@ -38,7 +38,7 @@ def read_google_sheets():
     service = build('sheets', 'v4', credentials=creds)
     sheet = service.spreadsheets()
     results = {}
-    for sheet_name in ['Applications', 'Nodes']:
+    for sheet_name in ['Applications', 'Nodes', 'Removed apps']:
         r = sheet.values().get(spreadsheetId=config.spreadsheet_id,
                                range=sheet_name).execute()
         rows = r.get('values', [])
@@ -161,9 +161,13 @@ def main():
     nchart = nchart_generator(result['Nodes'], xticks)
     result['Charts'].append(nchart)
 
+    # removed apps
+    result['Removed apps'] = [app['Key'] for app in result['Removed apps']]
+
     with open(config.data_file_addr, 'w') as f:
         f.write(json.dumps(result, indent=2))
 
 
 if __name__ == '__main__':
     main()
+
