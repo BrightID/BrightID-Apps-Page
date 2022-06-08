@@ -12,13 +12,22 @@ import json
 import time
 
 
-def num_linked_users(context):
-    url = config.linked_users_url.format(context)
+def num_linked_users_v5(context):
+    url = config.linked_users_url_v5.format(context)
     res = requests.get(url).json()
-    if res.get('error', False):
-        print(f'Error in getting linked users of {context}: {res}')
-        return '_'
-    return res['data']['count']
+    if res.get("error", False):
+        print(f"Error in getting linked users of {context}: {res}")
+        return "_"
+    return res["data"]["count"]
+
+
+def num_linked_users_v6(app):
+    url = config.linked_users_url_v6.format(app)
+    res = requests.get(url).json()
+    if res.get("error", False):
+        print(f"Error in getting linked users of {app}: {res}")
+        return "_"
+    return sum([v["count"] for v in res["data"]])
 
 
 def read_google_sheets():
@@ -126,12 +135,13 @@ def main():
     for app in result['Applications']:
         app.update({'Assigned Sponsorships': '_', 'Unused Sponsorships': '_',
                     'Used Sponsorships': '_', 'users': '_', 'order': 0})
-        if not app.get('Key'):
-            continue
 
         key = app.get('Key')
+        if not key:
+            continue
+
         if not node_apps.get(key):
-            print('Cannot find "{}" in the node data'.format(key))
+            print(f'Cannot find "{key}" in the node data')
             continue
 
         node_app = node_apps.get(key)
@@ -141,7 +151,10 @@ def main():
             app['Unused Sponsorships']
         app['order'] = app['Assigned Sponsorships'] * \
             max(app['Used Sponsorships'], 1)
-        app['users'] = num_linked_users(app.get('Context'))
+        if app.get('Using Blind Sig'):
+            app['users'] = num_linked_users_v6(key)
+        elif app.get('Context'):
+            app['users'] = num_linked_users_v5(app.get('Context'))
 
     # sort applications by used sponsorships
     result['Applications'].sort(key=lambda i: i['order'], reverse=True)
@@ -170,4 +183,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
