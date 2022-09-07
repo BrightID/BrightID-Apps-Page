@@ -151,7 +151,9 @@ def main():
             app['Unused Sponsorships']
         app['order'] = app['Assigned Sponsorships'] * \
             max(app['Used Sponsorships'], 1)
-        if app.get('Using Blind Sig'):
+        if app['Testing']:
+            app['users'] = 0
+        elif app.get('Using Blind Sig'):
             app['users'] = num_linked_users_v6(key)
         elif app.get('Context'):
             app['users'] = num_linked_users_v5(app.get('Context'))
