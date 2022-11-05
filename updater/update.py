@@ -22,12 +22,20 @@ def num_linked_users_v5(context):
 
 
 def num_linked_users_v6(app):
-    url = config.linked_users_url_v6.format(app)
+    url = config.linked_users_url_v6.format(app, 'previous')
     res = requests.get(url).json()
     if res.get("error", False):
         print(f"Error in getting linked users of {app}: {res}")
         return "_"
-    return sum([v["count"] for v in res["data"]])
+    users = sum([v["count"] for v in res["data"]])
+    if users == 0:
+        url = config.linked_users_url_v6.format(app, 'current')
+        res = requests.get(url).json()
+        if res.get("error", False):
+            print(f"Error in getting linked users of {app}: {res}")
+            return "_"
+        users = sum([v["count"] for v in res["data"]])
+    return users
 
 
 def read_google_sheets():
