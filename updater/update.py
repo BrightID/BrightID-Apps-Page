@@ -1,5 +1,4 @@
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
+from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from dateutil.relativedelta import relativedelta
 import requests
@@ -39,19 +38,7 @@ def num_linked_users_v6(app):
 
 
 def read_google_sheets():
-    creds = None
-    if os.path.exists('token.pickle'):
-        with open(config.token_file_addr, 'rb') as token:
-            creds = pickle.load(token)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                config.credentials_file, config.scopes)
-            creds = flow.run_local_server(port=0)
-        with open(config.token_file_addr, 'wb') as token:
-            pickle.dump(creds, token)
+    creds = Credentials.from_service_account_file(config.credentials_file, scopes=config.scopes)
     service = build('sheets', 'v4', credentials=creds)
     sheet = service.spreadsheets()
     results = {}
